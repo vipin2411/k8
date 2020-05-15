@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: browser
+spec:
+  containers:
+  - name: curl
+    image: vipin2411/curl
+    imagePullPolicy: IfNotPresent
+    command: ['sh', '-c', 'echo Pod running ; sleep 7200']
