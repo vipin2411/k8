@@ -1,0 +1,19 @@
+apiVersion: apps/v1  
+kind: Deployment  
+metadata:  
+  name: webserver-d
+spec:  
+  selector:
+    matchLabels:
+      app: nginxweb
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginxweb
+    spec:
+      containers:
+      - name: web
+        image: nginx:1.16-alpine
+        ports:
+        - containerPort: 80
