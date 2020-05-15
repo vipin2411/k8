@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-cip
+spec:
+  selector:
+    app: nginxweb
+  ports:
+  - protocol: TCP
+    port: 80
+  type: ClusterIP

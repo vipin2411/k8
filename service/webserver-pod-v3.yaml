@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver-v3
+  labels:
+    app: nginxweb
+    type: production
+    ver: v3
+spec:
+  containers:
+  - name: web
+    image: vipin2411/nginx-alpine:v3
+    ports:
+    - containerPort: 80

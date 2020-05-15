@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver-v2
+  labels:
+    app: nginxweb
+    type: production
+    ver: v2
+spec:
+  containers:
+  - name: web
+    image: vipin2411/nginx-alpine:v2
+    ports:
+    - containerPort: 80
